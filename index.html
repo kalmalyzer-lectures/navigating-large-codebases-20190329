@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Navigating Large Codebases
+
+Mikael Kalms
+
+CTO, Fall Damage
+
+mikael@kalms.org
+
+---
+
+# Purpose of this session
+
+We will cover mindset and techniques for navigating arbitrily large codebases.
+
+I will give some demonstrations.
+
+You will practice this on the Unreal Engine 4 codebase.
+
+---
+
+# What is particular about a large codebase?
+
+No one person can keep all the details of a large codebase in their head at the same time.
+
+Different people know different parts of the codebase well. Some parts are not well known to anyone; whoever touched it last has left the company.
+
+If you want to work effectively with a large codebase, you must learn to **work effectively with code that you do not understand well**.
+
+---
+
+class: center, middle
+
+# Tools and strategies
+
+---
+
+# Locate existing material
+
+  * Source code
+  * Compiled programs
+  * Developer diaries / conference presentations
+  * Developer documentation
+  * API documentation
+  * End-user documentation
+
+---
+  
+# Use your experience & knowledge
+
+  * Language(s)
+  * OS & 3rd party libraries
+  * Problem domain(s)
+  * "How would a sensible programmer write this?"
+  * Folder -> File -> Class -> Logic structure
+
+---
+  
+# Use applicable tools
+
+  * Text search
+  * Decompiler/disassembler
+  * Compiler/assembler
+  * File format viewers
+  * Hex editors
+
+---
+
+# How to find anything in a codebase
+
+State your goal.
+
+Find a starting spot in the codebase.
+
+Walk from there, until you find what you are looking for.
+
+---
+
+# Finding a starting spot
+
+Can you find it straight away?
+
+If not... can you find something related?
+
+If not... can you find _an aspect_ of it?
+
+Cast a wide net, then narrow it down.
+
+---
+
+# Walking through the codebase
+
+Read a small bit of code.
+
+Understand what it does.
+
+Remember _only_ what's relevant.
+
+Move to a related bit of code.
+
+Repeat.
+
+---
+
+# Example
+
+Plastic SCM client.
+
+How do I mute the hints?
+
+---
+
+# Example
+
+UE4 codebase.
+
+Where does the Editor application begin?
+
+---
+
+# Example
+
+UE4 codebase.
+
+Where is the runtime's main loop?
+
+---
+
+# Practice time
+
+Work in pairs.
+
+Pick something that you are curious about in the UE4 codebase.
+Find it, and read up on it.
+
+Examples:
+
+How does TMap place items in memory? What is its growth strategy?
+
+Does Unreal support multiple different gravity vectors at the same time?
+
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
