@@ -34,7 +34,7 @@ mikael@kalms.org
 
 # Purpose of this session
 
-We will cover mindset and techniques for navigating arbitrily large codebases.
+We will cover mindset and techniques for navigating arbitrarily large codebases.
 
 I will give some demonstrations.
 
@@ -52,9 +52,19 @@ If you want to work effectively with a large codebase, you must learn to **work 
 
 ---
 
+# What is particular about a large codebase?
+
+It is more than just one set of source files, in one language, that compiles to one executable.
+
+It is likely a whole suite of applications and services, with different build & deployment processes.
+
+If you want to work effectively with a large codebase, you must learn to **work effectively outside of a Visual Studio solution**.
+
+---
+
 class: center, middle
 
-# Tools and strategies
+# Tools & Materials
 
 ---
 
@@ -66,6 +76,7 @@ class: center, middle
   * Developer documentation
   * API documentation
   * End-user documentation
+  * Discussion forums
 
 ---
   
@@ -89,6 +100,12 @@ class: center, middle
 
 ---
 
+class: center, middle
+
+# Strategies
+
+---
+
 # How to find anything in a codebase
 
 State your goal.
@@ -97,11 +114,15 @@ Find a starting spot in the codebase.
 
 Walk from there, until you find what you are looking for.
 
+If this is not successful, find another starting spot, and try again.
+
 ---
 
 # Finding a starting spot
 
-Can you find it straight away?
+Do you know of something tangible that would be a good start?'
+
+Names of subsystems / methods / variables that are relevant?
 
 If not... can you find something related?
 
@@ -117,7 +138,7 @@ Read a small bit of code.
 
 Understand what it does.
 
-Remember _only_ what's relevant.
+Remember _only_ what's relevant. Extend your mental model of the codebase.
 
 Move to a related bit of code.
 
@@ -153,14 +174,15 @@ Where is the runtime's main loop?
 
 Work in pairs.
 
-Pick something that you are curious about in the UE4 codebase.
-Find it, and read up on it.
+Pick something that you are curious about in the UE4 codebase. Find it, and read up on it.
 
 Examples:
 
-How does TMap place items in memory? What is its growth strategy?
+How does TArray place items in memory? What is its growth strategy?
 
-Does Unreal support multiple different gravity vectors at the same time?
+What is the difference between TSharedPtr, TSharedRef, and TScopedPointer?
+
+Can Unreal support gravity in an arbitrary direction? What about per-object gravity?
 
 
 
